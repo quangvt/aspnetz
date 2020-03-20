@@ -8,6 +8,7 @@ import { ModalModule, TabsModule, TooltipModule, BsDropdownModule, PopoverModule
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PhoneBookComponent } from './phonebook/phonebook.component';
 import { CreatePersonModalComponent } from './phonebook/create-person-modal.component';
+import { EditPersonModalComponent } from './phonebook/edit-person-modal.component';
 import { MainRoutingModule } from './main-routing.module';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
@@ -35,7 +36,8 @@ NgxBootstrapDatePickerConfigService.registerNgxBootstrapDatePickerLocales();
     declarations: [
         DashboardComponent,
         PhoneBookComponent,
-        CreatePersonModalComponent
+        CreatePersonModalComponent,
+        EditPersonModalComponent
     ],
     providers: [
         { provide: BsDatepickerConfig, useFactory: NgxBootstrapDatePickerConfigService.getDatepickerConfig },

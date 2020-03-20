@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities.Auditing;
 using MyCompanyName.AbpZeroTemplate.Constants;
@@ -18,5 +19,7 @@ namespace MyCompanyName.AbpZeroTemplate.PhoneBook
 
         [MaxLength(PersonConsts.MaxEmailAddressLength)]
         public virtual string EmailAddress { get; set; }
+
+        public virtual ICollection<Phone> Phones { get; set; }
     }
 }

@@ -12,5 +12,13 @@ namespace MyCompanyName.AbpZeroTemplate.PhoneBook
         Task CreatePerson(CreatePersonInput input);
 
         Task DeletePerson(EntityDto input);
+
+        Task DeletePhone(EntityDto<long> input);
+
+        Task<PhoneInPersonListDto> AddPhone(AddPhoneInput input);
+
+        Task<GetPersonForEditOutput> GetPersonForEdit(GetPersonForEditInput input);
+
+        Task EditPerson(EditPersonInput input);
     }
 }

@@ -1,14 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using MyCompanyName.AbpZeroTemplate.Constants;
 using MyCompanyName.AbpZeroTemplate.EntityFrameworkCore;
+using MyCompanyName.AbpZeroTemplate.PhoneBook;
 
 namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
 {
-    public class InitialPeopleCreator
+    public class InitialPeopleAndPhoneCreator
     {
         private readonly AbpZeroTemplateDbContext _context;
 
-        public InitialPeopleCreator(AbpZeroTemplateDbContext context)
+        public InitialPeopleAndPhoneCreator(AbpZeroTemplateDbContext context)
         {
             _context = context;
         }
@@ -23,7 +26,12 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
                     {
                         Name = "Quang",
                         Surname = "Vu",
-                        EmailAddress = "quangvt@hotmail.com"
+                        EmailAddress = "quangvt@hotmail.com",
+                        Phones = new List<Phone>
+                                {
+                                    new Phone {Type = PhoneType.Home, Number = "1112242"},
+                                    new Phone {Type = PhoneType.Mobile, Number = "2223342"}
+                                }
                     });
             }
 
@@ -35,7 +43,11 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
                     {
                         Name = "Son",
                         Surname = "Vu",
-                        EmailAddress = "sonvt@hotmail.com"
+                        EmailAddress = "sonvt@hotmail.com",
+                        Phones = new List<Phone>
+                                {
+                                    new Phone {Type = PhoneType.Home, Number = "8889977"}
+                                }
                     });
             }
         }

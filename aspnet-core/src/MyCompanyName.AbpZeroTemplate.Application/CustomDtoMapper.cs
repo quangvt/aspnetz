@@ -137,10 +137,9 @@ namespace MyCompanyName.AbpZeroTemplate
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */
             configuration.CreateMap<Person, PersonListDto>();
             configuration.CreateMap<CreatePersonInput, Person>();
-            //configuration.CreateMap<AddPhoneInput, Phone>();
-            //configuration.CreateMap<CreatePersonInput, Person>();
-            //configuration.CreateMap<Person, GetPersonForEditOutput>();
-            //configuration.CreateMap<Phonebook, PhoneInPersonListDto>();
+            configuration.CreateMap<AddPhoneInput, Phone>();
+            configuration.CreateMap<Person, GetPersonForEditOutput>();
+            configuration.CreateMap<Phone, PhoneInPersonListDto>();
         }
     }
 }
