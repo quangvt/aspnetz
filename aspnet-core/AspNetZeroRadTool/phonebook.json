@@ -1,0 +1,107 @@
+{
+  "IsRegenerate": false,
+  "MenuPosition": "main",
+  "RelativeNamespace": "PhoneBook",
+  "EntityName": "Person",
+  "EntityNamePlural": "Persons",
+  "TableName": "PbPersons",
+  "PrimaryKeyType": "int",
+  "BaseClass": "FullAuditedEntity",
+  "EntityHistory": false,
+  "AutoMigration": false,
+  "UpdateDatabase": false,
+  "CreateUserInterface": true,
+  "CreateViewOnly": true,
+  "CreateExcelExport": true,
+  "PagePermission": {
+       "Host": true,
+       "Tenant": true
+  },
+  "Properties": [
+            {
+              "Name": "Name",
+              "Type": "string",
+              "MaxLength": 32,
+              "MinLength": 0,
+              "Range": {
+                "IsRangeSet": false,
+                "MinimumValue": 0,
+                "MaximumValue": 0
+              },
+              "Required": true,
+              "Nullable": false,
+              "Regex": "",
+              "UserInterface": {
+                "List": true,
+                "AdvancedFilter": true,
+                "CreateOrUpdate": true
+                 }
+            },
+            {
+              "Name": "Surname",
+              "Type": "string",
+              "MaxLength": 32,
+              "MinLength": 0,
+              "Range": {
+                "IsRangeSet": false,
+                "MinimumValue": 0,
+                "MaximumValue": 0
+              },
+              "Required": true,
+              "Nullable": false,
+              "Regex": "",
+              "UserInterface": {
+                "List": true,
+                "AdvancedFilter": true,
+                "CreateOrUpdate": true
+              }
+            },
+            {
+              "Name": "EmailAddress",
+              "Type": "string",
+              "MaxLength": 255,
+              "MinLength": 0,
+              "Range": {
+                "IsRangeSet": false,
+                "MinimumValue": 0,
+                "MaximumValue": 0
+              },
+              "Required": true,
+              "Nullable": false,
+              "Regex": "",
+              "UserInterface": {
+                "List": true,
+                "AdvancedFilter": true,
+                "CreateOrUpdate": true
+              }
+            }
+  ],
+  "NavigationProperties": [
+			{
+              "Namespace": "Volosoft.RadToolExplainer.Authorization.Users",
+              "ForeignEntityName": "User",
+              "IdType": "long",
+              "IsNullable": true,
+              "PropertyName": "UserId",
+              "DisplayPropertyName": "Name",
+              "DuplicationNumber": 0,
+              "RelationType": "single"
+            }
+   ],
+  "EnumDefinitions": [
+            {
+              "Name": "ProductTypeDemo",
+              "Namespace": "Volosoft.RadToolExplainer",
+              "EnumProperties": [
+                        {
+                          "Name": "Liquid",
+                          "Value": 1
+                        },
+                        {
+                          "Name": "Solid",
+                          "Value": 2
+                        }
+               ]
+            }
+   ]
+}
