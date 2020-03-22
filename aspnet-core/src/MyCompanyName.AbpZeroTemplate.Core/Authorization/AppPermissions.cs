@@ -6,6 +6,11 @@
     /// </summary>
     public static class AppPermissions
     {
+        public const string Pages_Coronas = "Pages.Coronas";
+        public const string Pages_Coronas_Create = "Pages.Coronas.Create";
+        public const string Pages_Coronas_Edit = "Pages.Coronas.Edit";
+        public const string Pages_Coronas_Delete = "Pages.Coronas.Delete";
+
         //COMMON PERMISSIONS (FOR BOTH OF TENANTS AND HOST)
 
         public const string Pages = "Pages";
@@ -49,8 +54,6 @@
         public const string Pages_Tenant_PhoneBook = "Pages.Tenant.PhoneBook";
         public const string Pages_Tenant_PhoneBook_CreatePerson = "Pages.Tenant.PhoneBook.CreatePerson";
         public const string Pages_Tenant_PhoneBook_DeletePerson = "Pages.Tenant.PhoneBook.DeletePerson";
-
-        public const string Pages_Tenant_PhoneBook_EditPerson = "Pages.Tenant.PhoneBook.EditPerson";
 
         public const string Pages_Administration_Tenant_Settings = "Pages.Administration.Tenant.Settings";
 

@@ -29,6 +29,13 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization
             //COMMON PERMISSIONS (FOR BOTH OF TENANTS AND HOST)
 
             var pages = context.GetPermissionOrNull(AppPermissions.Pages) ?? context.CreatePermission(AppPermissions.Pages, L("Pages"));
+
+            var coronas = pages.CreateChildPermission(AppPermissions.Pages_Coronas, L("Coronas"));
+            coronas.CreateChildPermission(AppPermissions.Pages_Coronas_Create, L("CreateNewCorona"));
+            coronas.CreateChildPermission(AppPermissions.Pages_Coronas_Edit, L("EditCorona"));
+            coronas.CreateChildPermission(AppPermissions.Pages_Coronas_Delete, L("DeleteCorona"));
+
+
             pages.CreateChildPermission(AppPermissions.Pages_DemoUiComponents, L("DemoUiComponents"));
 
             var administration = pages.CreateChildPermission(AppPermissions.Pages_Administration, L("Administration"));
@@ -68,7 +75,6 @@ namespace MyCompanyName.AbpZeroTemplate.Authorization
             var phoneBook = pages.CreateChildPermission(AppPermissions.Pages_Tenant_PhoneBook, L("PhoneBook"), multiTenancySides: MultiTenancySides.Tenant);
             phoneBook.CreateChildPermission(AppPermissions.Pages_Tenant_PhoneBook_CreatePerson, L("CreateNewPerson"), multiTenancySides: MultiTenancySides.Tenant);
             phoneBook.CreateChildPermission(AppPermissions.Pages_Tenant_PhoneBook_DeletePerson, L("DeletePerson"), multiTenancySides: MultiTenancySides.Tenant);
-            phoneBook.CreateChildPermission(AppPermissions.Pages_Tenant_PhoneBook_EditPerson, L("EditPerson"), multiTenancySides: MultiTenancySides.Tenant);
 
             administration.CreateChildPermission(AppPermissions.Pages_Administration_Tenant_Settings, L("Settings"), multiTenancySides: MultiTenancySides.Tenant);
             administration.CreateChildPermission(AppPermissions.Pages_Administration_Tenant_SubscriptionManagement, L("Subscription"), multiTenancySides: MultiTenancySides.Tenant);

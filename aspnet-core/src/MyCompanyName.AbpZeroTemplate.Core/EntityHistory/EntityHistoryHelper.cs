@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyCompanyName.AbpZeroTemplate.Virus;
+using System;
 using System.Linq;
 using Abp.Organizations;
 using MyCompanyName.AbpZeroTemplate.Authorization.Roles;

@@ -1,3 +1,5 @@
+﻿using MyCompanyName.AbpZeroTemplate.Virus.Dtos;
+using MyCompanyName.AbpZeroTemplate.Virus;
 using Abp.Application.Editions;
 using Abp.Application.Features;
 using Abp.Auditing;
@@ -43,6 +45,8 @@ namespace MyCompanyName.AbpZeroTemplate
     {
         public static void CreateMappings(IMapperConfigurationExpression configuration)
         {
+            configuration.CreateMap<CreateOrEditCoronaDto, Corona>().ReverseMap();
+            configuration.CreateMap<CoronaDto, Corona>().ReverseMap();
             //Inputs
             configuration.CreateMap<CheckboxInputType, FeatureInputTypeDto>();
             configuration.CreateMap<SingleLineStringInputType, FeatureInputTypeDto>();
@@ -137,9 +141,10 @@ namespace MyCompanyName.AbpZeroTemplate
             /* ADD YOUR OWN CUSTOM AUTOMAPPER MAPPINGS HERE */
             configuration.CreateMap<Person, PersonListDto>();
             configuration.CreateMap<CreatePersonInput, Person>();
-            configuration.CreateMap<AddPhoneInput, Phone>();
-            configuration.CreateMap<Person, GetPersonForEditOutput>();
-            configuration.CreateMap<Phone, PhoneInPersonListDto>();
+            //configuration.CreateMap<AddPhoneInput, Phone>();
+            //configuration.CreateMap<CreatePersonInput, Person>();
+            //configuration.CreateMap<Person, GetPersonForEditOutput>();
+            //configuration.CreateMap<Phonebook, PhoneInPersonListDto>();
         }
     }
 }
