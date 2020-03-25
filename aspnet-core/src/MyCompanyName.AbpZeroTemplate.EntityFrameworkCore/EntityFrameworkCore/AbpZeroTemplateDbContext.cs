@@ -12,6 +12,7 @@ using MyCompanyName.AbpZeroTemplate.MultiTenancy.Accounting;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy.Payments;
 using MyCompanyName.AbpZeroTemplate.PhoneBook;
 using MyCompanyName.AbpZeroTemplate.Storage;
+using MyCompanyName.AbpZeroTemplate.Learning;
 
 namespace MyCompanyName.AbpZeroTemplate.EntityFrameworkCore
 {
@@ -22,6 +23,8 @@ namespace MyCompanyName.AbpZeroTemplate.EntityFrameworkCore
         public virtual DbSet<Person> Persons { get; set; }
 
         public virtual DbSet<Phone> Phones { get; set; }
+
+        public virtual DbSet<Student> Students { get; set; }
 
         public virtual DbSet<BinaryObject> BinaryObjects { get; set; }
 

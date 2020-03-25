@@ -28,5 +28,6 @@
 
   <ItemGroup>
     <Folder Include="PhoneBook\" />
+    <Folder Include="Learning\" />
   </ItemGroup>
 </Project>

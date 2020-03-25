@@ -49,11 +49,14 @@
         public const string Pages_Tenant_PhoneBook = "Pages.Tenant.PhoneBook";
         public const string Pages_Tenant_PhoneBook_CreatePerson = "Pages.Tenant.PhoneBook.CreatePerson";
         public const string Pages_Tenant_PhoneBook_DeletePerson = "Pages.Tenant.PhoneBook.DeletePerson";
-
         public const string Pages_Tenant_PhoneBook_EditPerson = "Pages.Tenant.PhoneBook.EditPerson";
 
-        public const string Pages_Administration_Tenant_Settings = "Pages.Administration.Tenant.Settings";
+        public const string Pages_Tenant_Learning = "Pages.Tenant.Learning";
+        public const string Pages_Tenant_Learning_CreateStudent = "Pages.Tenant.Learning.CreateStudent";
+        public const string Pages_Tenant_Learning_DeleteStudent = "Pages.Tenant.Learning.DeleteStudent";
+        public const string Pages_Tenant_Learning_EditStudent = "Pages.Tenant.Learning.EditStudent";
 
+        public const string Pages_Administration_Tenant_Settings = "Pages.Administration.Tenant.Settings";
         public const string Pages_Administration_Tenant_SubscriptionManagement = "Pages.Administration.Tenant.SubscriptionManagement";
 
         //HOST-SPECIFIC PERMISSIONS

@@ -18,6 +18,7 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
             new HostRoleAndUserCreator(_context).Create();
             new DefaultSettingsCreator(_context).Create();
             new InitialPeopleAndPhoneCreator(_context).Create();
+            new InitialStudentCreator(_context).Create();
 
             _context.SaveChanges();
         }

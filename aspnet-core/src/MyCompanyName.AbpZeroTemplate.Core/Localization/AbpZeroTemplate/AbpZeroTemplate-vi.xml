@@ -7,6 +7,7 @@
     <text name="Roles">Vai trò</text>
     <text name="Users">Người dùng</text>
     <text name="PhoneBook">Danh Bạ</text>
+    <text name="Learning">Học Tập</text>
     <text name="InvalidFormMessage">Biểu mẫu của bạn không hợp lệ. Vui lòng kiểm tra và sửa lại.</text>
     <text name="InvalidUserNameOrPassword">Sai tên truy cập hoặc mật khẩu</text>
     <text name="ThereIsNoTenantDefinedWithName{0}">Không có thuê bao được định nghĩa với tên {0}</text>

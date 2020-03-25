@@ -25,6 +25,8 @@ using MyCompanyName.AbpZeroTemplate.Editions.Dto;
 using MyCompanyName.AbpZeroTemplate.Friendships;
 using MyCompanyName.AbpZeroTemplate.Friendships.Cache;
 using MyCompanyName.AbpZeroTemplate.Friendships.Dto;
+using MyCompanyName.AbpZeroTemplate.Learning;
+using MyCompanyName.AbpZeroTemplate.Learning.Dto;
 using MyCompanyName.AbpZeroTemplate.Localization.Dto;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy;
 using MyCompanyName.AbpZeroTemplate.MultiTenancy.Dto;
@@ -140,6 +142,10 @@ namespace MyCompanyName.AbpZeroTemplate
             configuration.CreateMap<AddPhoneInput, Phone>();
             configuration.CreateMap<Person, GetPersonForEditOutput>();
             configuration.CreateMap<Phone, PhoneInPersonListDto>();
+
+            configuration.CreateMap<Student, StudentListDto>();
+            configuration.CreateMap<CreateStudentInput, Student>();
+            configuration.CreateMap<Student, GetStudentForEditOutput>();
         }
     }
 }

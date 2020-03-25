@@ -31,7 +31,8 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
                                 {
                                     new Phone {Type = PhoneType.Home, Number = "1112242"},
                                     new Phone {Type = PhoneType.Mobile, Number = "2223342"}
-                                }
+                                },
+                        TenantId = 1
                     });
             }
 
@@ -47,7 +48,8 @@ namespace MyCompanyName.AbpZeroTemplate.Migrations.Seed.Host
                         Phones = new List<Phone>
                                 {
                                     new Phone {Type = PhoneType.Home, Number = "8889977"}
-                                }
+                                },
+                        TenantId = 1
                     });
             }
         }
